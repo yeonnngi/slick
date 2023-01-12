@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slick2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <!-- ▼ 우리가 작업하는 css 파일의 힘이 더 커야하니 제일 아래에 배치하고 그 위에 slick.min.css 링크 추가 -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+</head>
+<body>
+<!-- .wrap>.container -->
+<div class="wrap">
+    <div class="container">
+        <div class="slick">
+            <div>
+                <img src="https://img.megabox.co.kr/SharedImg/2022/12/19/THSeKCTyXQ3QgOM2cwSmj68IxXkAYn1F_648.jpg"
+                    alt="이미지1">
+            </div>
+            <div>
+                <img src="https://img.megabox.co.kr/SharedImg/2022/12/19/b4PIqkf27GDP4TAwmCnxoJZSK10C823t_648.jpg"
+                    alt="이미지2"></div>
+            <div>
+                <img src="https://img.megabox.co.kr/SharedImg/2022/12/19/2pQKI2v7RRsxuLslwEK0CZjRsq6ykDB5_648.jpg"
+                    alt="이미지3"></div>
+        </div>
+    </div>
+</div>
+<!--jquery 연결, 닫는 <body>전에 넣기 -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.slick').slick({
+            //setting - name: setting - value
+            autoplay: true,
+            /* 콤마로 구분 */
+            dots: true
+        });
+    });
+</script>
+<!-- 먼저 참조해야할 것을 위에 적어야 아래 내용들이 위의 코드를 참고하여 반영이 됨 -->
+<!-- 외부에 있는 코드를 연결했을때는 해당 내용에 추가해서 적으면 안됨, 건들면 안됨
+    추가할 내용이 있으면 아래에 별도의 <script></script>를 만들어서 추가해주기 -->
+</body>
+
+</html>
