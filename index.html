@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slick3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <!-- style.css이 힘이 강해야해서 그 위에 넣어주기 -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"/> <!-- 위치 상관없음 css아래여도됨 -->
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- 영역을 싼다 -->
+        <div class="main">
+            <div class="your-class">
+                <div class="s1"><video autoplay muted controls
+                    src="http://h.vod.cgv.co.kr:80/vodCGVa/86072/86072_210698_1200_128_960_540.mp4"></video>
+                </div>
+                <div class="s2"><video autoplay muted controls
+                    src="http://h.vod.cgv.co.kr:80/vodCGVa/86072/86072_210152_1200_128_960_540.mp4"></video>
+                </div>
+                <div class="s3"><video autoplay muted controls
+                    src="http://h.vod.cgv.co.kr:80/vodCGVa/86072/86072_211051_1200_128_960_540.mp4"></video>
+                </div>
+            </div> <!-- 음소거muted가 되어야 autoplay 가능, controls은 영상을 재생하고 멈추고 조절할 수 있는 것 -->
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> <!-- jquery 넣기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- slick js 배치 -->
+    <script>
+        $(document).ready(function () {
+            $('.your-class').slick({
+                autoplay:true, 
+                dots:true, /* 페이지를 나타냄
+                ,는 css의 ;와 같은 역할 */
+                //setting-name: setting-value 옵션있으면 이렇게 넣어라는 것으로 에러가 날수도 있어 지워주기
+                fade:true,
+                /* https://github.com/kenwheeler/slick/ 설정값 참고하여 넣어주기 */
+            });
+        });
+    </script>
+    <!-- jquery인데 script코드인것 제일 아래에 <script></script>생성해서 넣어주기 -->
+</body>
+
+</html>
