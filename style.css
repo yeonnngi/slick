@@ -1,0 +1,82 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+ul,li{list-style: none;}
+
+.wrap {}
+
+.wrap .container {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.wrap .container .slick .slick-slide{height: 200px;}
+
+.wrap .container .slick .slick-slide img{
+    width: 100%;
+}
+
+/* slick button */
+.wrap .container .slick .slick-arrow{
+    position: absolute; /* 영역을 붕 띄우기 */
+    top: 50%; transform: translateY(-50%);
+    /* top값만 줬으니 y축만 조정 */
+    font-size: 0;
+    visibility: hidden; /* 남은 버튼 모양을 안보이게함 */
+}
+.wrap .container .slick .slick-prev{
+    z-index: 10; /* 제일 아래로 위치하게 되어 올려주기 */
+    left: 10%; /* left:0은 left를 기준으로 0 나의 왼쪽을 부모와 딱 붙겠다->간격 조금 떨어뜨리려 10%, 나의 왼쪽을 부모와 10% 떨어지게*/
+}
+
+.wrap .container .slick .slick-prev::after{
+    content: "\f053";
+    visibility: visible; /* 부모는 안보이지만 나는 보이게 다시 설정*/
+    font-size: 48px; /* 부모가 모습을 감춰서 다시 설정해주는 것 */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    /* 아이콘은 글자처럼 취급하기 때문에 글자와 동일하게 값을 설정해준다 */
+    color: #fff;
+}
+
+
+.wrap .container .slick .slick-next{
+    right: 10%; /* 나의 오른쪽을 부모와 딱 붙겠다-> 간격 조금 떨어뜨리려 10%, 나의 오른쪽을 부모와 10% 떨어지게 */
+}
+
+.wrap .container .slick .slick-next::after{
+    content: "\f054"; /* 위와 동일한 설정이니 내용은 그대로 하고 아이콘 번호만 변경해주기 */
+    visibility: visible;
+    font-size: 48px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #fff;
+}
+
+.wrap .container .slick .slick-dots{
+    text-align: center; /* 내 아래에 인라인요소가 있거든 가운데로 배치 */
+}
+.wrap .container .slick .slick-dots li{
+    display: inline; /* 블록요소인 li를 글자처럼 진행되는 인라인요소로 변경시켜줌 */
+    margin: 0 5px; /* 사이 마진, 가운데 영역은 총 10px인것 */
+    /* inline요소는 padding과 margin의 좌우는 적용되나 상하는 적용안됨 */
+}
+
+/* ▼ 버튼은 태어날때부터 외곽선과 반경과 배경색을 가지고 있다 */
+.wrap .container .slick .slick-dots li button{
+    font-size: 0;
+    border: none;
+    width: 13px;
+    height: 13px;
+    background-color: #888;
+    border-radius: 50%; /* 원이됨 */
+    transition: 0.3s; /* 본위치에 설정해줘야 움직임이 자연스러움 */
+}
+
+/* ▼ li안에 있는 slick-dots에 대한 설정값 변경 */
+.wrap .container .slick .slick-dots li.slick-active button{
+    background-color: #222;
+    width: 20px; border-radius: 10px;
+    /* 버튼은 인라인요소지만 넓이 인식이 가능
+    인라인요소 중 공간을 인식하는 요소
+    img, button */
+}
